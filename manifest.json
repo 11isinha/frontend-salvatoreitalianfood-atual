@@ -1,0 +1,24 @@
+{
+    "name": "Salvatore Italian Food",
+    "short_name": "Salvatore",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#006400",
+    "description": "Cardápio digital Salvatore Italian Food",
+    "icons": [
+        {
+            "src": "images/logo64.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            
+            "purpose": "any"
+        },
+        {
+            "src": "images/512logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose":"any"
+        }
+    ]
+}

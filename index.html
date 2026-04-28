@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salvatore Italian Food</title>
 
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#006400">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="./images/logo64 .png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo64 .png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo64 .png">
+    <link rel="icon" type="image/png" href="./images/logo64 .png">
+    <link rel="shortcut icon" href="./images/logo64 .png" type="image/x-icon">
+    <meta name="msapplication-TileImage" content ="./images/logo64.png">
+    <meta property="og:image" content="./images/logo64.png">
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -166,7 +178,7 @@
             </div>
 
             <div class="w-full md:w-[45%]">
-                <img src="./images/prato.webp" alt="Prato" class="w-[90%] mx-auto">
+                <img src="./images/prato.png" alt="Prato" class="w-[90%] mx-auto">
             </div>
 
         </div>
@@ -326,7 +338,7 @@
 
     <!-- BOTÃO WHATSAPP -->
     <a href="https://wa.me/5515987654321" target="_blank" class="fixed bottom-5 right-5">
-        <img src="./images/whats.webp" alt="Link WhatsApp" class="h-[60px]">
+        <img src="./images/whats.png" alt="Link WhatsApp" class="h-[60px]">
     </a>
 
     <!-- MODAL DE DETALHES DO PRODUTO -->
@@ -698,7 +710,13 @@
             }
             inicializarCarrinho();
         }
-
+        if('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('Service Worker Registrado no Porto! 🍝', reg))
+                .catch(err => console.error('Erro ao preparar : ', err));
+            });
+        }
     </script>
 </body>
 
