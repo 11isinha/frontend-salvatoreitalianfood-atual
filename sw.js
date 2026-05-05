@@ -21,7 +21,7 @@ self.addEventListener('install', (event)=>{
 });
 //Faz as requisições olharem o cache primeiro 
 self.addEventListener('fetch', (event) => {
-    event.respondWich(
+    event.respondWith(
         caches.match(event.request).then((response) => {
             return response || fetch(event.request);
 

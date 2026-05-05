@@ -8,8 +8,8 @@
     "description": "Cardápio digital Salvatore Italian Food",
     "icons": [
         {
-            "src": "images/logo64.png",
-            "sizes": "192x192",
+            "src": "images/512logo.png",
+            "sizes": "512x512",
             "type": "image/png",
             
             "purpose": "any"
